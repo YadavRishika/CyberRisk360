@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CyberRisk360 — Risk Review Ledger</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.3/chart.umd.min.js"></script>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-left">
+    <span class="mark">CyberRisk360</span>
+    <span class="mark-sub">Cyber Risk Analytics &amp; Insurance Review Accelerator</span>
+  </div>
+  <div class="masthead-right">
+    <label for="org-select">Account</label>
+    <select id="org-select"></select>
+    <button id="simulate-worsen" class="btn btn-ghost" title="Simulate a worsening month">Simulate decline</button>
+    <button id="simulate-improve" class="btn btn-ghost" title="Simulate an improving month">Simulate improvement</button>
+  </div>
+</header>
+
+<div class="disclaimer-bar" id="disclaimer-bar">
+  All figures on this page are simulated for demonstration. Nothing here binds a policy, sets a premium, or represents a final underwriting decision.
+</div>
+
+<main class="ledger">
+
+  <!-- Case summary -->
+  <section class="panel case-summary">
+    <div class="score-block">
+      <div class="score-number" id="risk-score">—</div>
+      <div class="score-band" id="risk-band">—</div>
+      <div class="score-caption">Current cyber risk score (0–100)</div>
+    </div>
+    <div class="case-details">
+      <h2 id="org-name">—</h2>
+      <dl class="fact-grid">
+        <dt>Industry</dt><dd id="org-industry">—</dd>
+        <dt>Size</dt><dd id="org-size">—</dd>
+        <dt>Last assessed</dt><dd id="org-last-date">—</dd>
+        <dt>Pending reviews</dt><dd id="org-pending">—</dd>
+      </dl>
+    </div>
+    <div class="trend-block">
+      <canvas id="trend-chart" height="140"></canvas>
+    </div>
+  </section>
+
+  <!-- Explanation -->
+  <section class="panel">
+    <h3>Why the score changed</h3>
+    <p class="headline" id="explain-headline">—</p>
+    <div class="explain-grid">
+      <div>
+        <table class="ledger-table" id="contributors-table">
+          <thead><tr><th>Factor</th><th>Point change</th><th>Direction</th></tr></thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div>
+        <canvas id="contributors-chart" height="180"></canvas>
+      </div>
+    </div>
+    <p class="recommended-action" id="recommended-action">—</p>
+  </section>
+
+  <!-- Signal snapshot -->
+  <section class="panel">
+    <h3>Latest security signal snapshot</h3>
+    <table class="ledger-table" id="signal-table">
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <!-- Exposure + Gaps -->
+  <section class="panel">
+    <h3>Estimated financial exposure vs. existing coverage</h3>
+    <p class="subtle">Figures are simulated order-of-magnitude estimates, not actuarial quotes.</p>
+    <table class="ledger-table" id="gap-table">
+      <thead>
+        <tr><th>Coverage category</th><th>Estimated exposure</th><th>Existing limit</th><th>Gap</th><th>Status</th></tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+  <!-- Alerts -->
+  <section class="panel">
+    <h3>Risk alerts</h3>
+    <div id="alerts-list" class="alerts-list"></div>
+  </section>
+
+  <!-- Review history -->
+  <section class="panel">
+    <h3>Review history</h3>
+    <table class="ledger-table" id="history-table">
+      <thead><tr><th>Date</th><th>Alert</th><th>Action</th><th>Notes</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </section>
+
+</main>
+
+<!-- Review modal -->
+<div class="modal-overlay" id="review-modal">
+  <div class="modal">
+    <h3>Analyst review — Alert <span id="modal-alert-id"></span></h3>
+    <p id="modal-alert-reason" class="subtle"></p>
+    <label for="analyst-name">Analyst name</label>
+    <input type="text" id="analyst-name" placeholder="e.g. R. Sharma">
+    <label for="analyst-comments">Comments</label>
+    <textarea id="analyst-comments" rows="3" placeholder="Reasoning for this decision..."></textarea>
+    <div class="modal-actions">
+      <button class="btn btn-reject" data-decision="Reject">Reject</button>
+      <button class="btn btn-info" data-decision="Request Info">Request info</button>
+      <button class="btn btn-approve" data-decision="Approve">Approve</button>
+    </div>
+    <button class="modal-close" id="modal-close">Close</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+</body>
+</html>

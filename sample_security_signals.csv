@@ -1,0 +1,19 @@
+org_id,org_name,snapshot_date,critical_vulnerabilities,patch_compliance_pct,mfa_coverage_pct,security_incidents,backup_compliance_pct,endpoint_protection_pct,training_compliance_pct,avg_remediation_days
+1,Nimbus Retail Pvt Ltd,2026-01-05,2,92,90,0,95,96,88,4.5
+1,Nimbus Retail Pvt Ltd,2026-02-05,2,90,90,0,95,96,88,4.2
+1,Nimbus Retail Pvt Ltd,2026-03-05,3,88,88,0,94,95,85,5.0
+1,Nimbus Retail Pvt Ltd,2026-04-05,5,80,78,1,90,93,82,6.5
+1,Nimbus Retail Pvt Ltd,2026-05-05,7,72,65,2,80,90,78,8.9
+1,Nimbus Retail Pvt Ltd,2026-06-05,6,75,70,1,83,91,80,7.8
+2,Vertex Logistics Ltd,2026-01-10,1,96,95,0,98,97,92,3.0
+2,Vertex Logistics Ltd,2026-02-10,1,95,95,0,98,97,92,3.1
+2,Vertex Logistics Ltd,2026-03-10,2,93,92,0,96,96,90,3.5
+2,Vertex Logistics Ltd,2026-04-10,2,92,90,1,95,96,88,4.0
+2,Vertex Logistics Ltd,2026-05-10,1,94,93,0,97,97,90,3.2
+2,Vertex Logistics Ltd,2026-06-10,1,95,94,0,97,97,91,3.0
+3,BrightHealth Diagnostics,2026-01-15,4,85,80,1,88,90,75,6.0
+3,BrightHealth Diagnostics,2026-02-15,5,82,76,1,85,89,73,6.8
+3,BrightHealth Diagnostics,2026-03-15,6,78,72,2,82,87,70,7.5
+3,BrightHealth Diagnostics,2026-04-15,8,70,60,3,75,84,65,9.5
+3,BrightHealth Diagnostics,2026-05-15,9,65,58,3,72,82,62,10.2
+3,BrightHealth Diagnostics,2026-06-15,7,70,63,2,78,85,68,8.4

@@ -1,0 +1,16 @@
+org_id,org_name,policy_number,effective_date,expiry_date,status,coverage_type,coverage_limit_inr,deductible_inr
+1,Nimbus Retail Pvt Ltd,POL-CYB-1001,2026-01-01,2026-12-31,Active,Ransomware,2500000,100000
+1,Nimbus Retail Pvt Ltd,POL-CYB-1001,2026-01-01,2026-12-31,Active,Data Breach,3000000,150000
+1,Nimbus Retail Pvt Ltd,POL-CYB-1001,2026-01-01,2026-12-31,Active,Business Interruption,2000000,100000
+1,Nimbus Retail Pvt Ltd,POL-CYB-1001,2026-01-01,2026-12-31,Active,Incident Response,1000000,50000
+1,Nimbus Retail Pvt Ltd,POL-CYB-1001,2026-01-01,2026-12-31,Active,Third-Party Liability,1500000,100000
+2,Vertex Logistics Ltd,POL-CYB-1002,2026-01-01,2026-12-31,Active,Ransomware,4000000,150000
+2,Vertex Logistics Ltd,POL-CYB-1002,2026-01-01,2026-12-31,Active,Data Breach,4000000,150000
+2,Vertex Logistics Ltd,POL-CYB-1002,2026-01-01,2026-12-31,Active,Business Interruption,3000000,150000
+2,Vertex Logistics Ltd,POL-CYB-1002,2026-01-01,2026-12-31,Active,Incident Response,1500000,75000
+2,Vertex Logistics Ltd,POL-CYB-1002,2026-01-01,2026-12-31,Active,Third-Party Liability,2000000,100000
+3,BrightHealth Diagnostics,POL-CYB-1003,2026-01-01,2026-12-31,Active,Ransomware,2000000,100000
+3,BrightHealth Diagnostics,POL-CYB-1003,2026-01-01,2026-12-31,Active,Data Breach,2500000,150000
+3,BrightHealth Diagnostics,POL-CYB-1003,2026-01-01,2026-12-31,Active,Business Interruption,1500000,100000
+3,BrightHealth Diagnostics,POL-CYB-1003,2026-01-01,2026-12-31,Active,Incident Response,800000,50000
+3,BrightHealth Diagnostics,POL-CYB-1003,2026-01-01,2026-12-31,Active,Third-Party Liability,1000000,50000
